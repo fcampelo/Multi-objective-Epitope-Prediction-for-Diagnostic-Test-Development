@@ -89,7 +89,7 @@ system.time({
                         "Info_peptide",
                         "Info_PepID")
 
-print("Writing result to the file...")
+  print("Writing result to the file...")
     
   write.csv(result,
             "./output/predictions_lev_dist.csv", 
@@ -97,6 +97,14 @@ print("Writing result to the file...")
 })
 
 View(result)
+
+res <- read.csv(file = './output/predictions_lev_dist.csv')
+
+hist(res$A_to_B_lv_dist)
+
+View(res)
+
+
 
 
 
